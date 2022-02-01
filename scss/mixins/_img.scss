@@ -1,0 +1,11 @@
+
+@mixin img($width, $height){
+    width: $width;
+    height: $height;
+}
+
+@mixin profile($width, $height){
+    width: $width;
+    height: $height;
+    padding-left: 15%;
+}

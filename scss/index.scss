@@ -1,0 +1,71 @@
+@import "mixins/container";
+@import "mixins/img";
+@import "mixins/links";
+
+.img {
+  @include img(70%, 30vh);
+}
+
+.profile {
+  @include profile(50%, 50%);
+}
+
+.links {
+  @include links();
+  li {
+    padding: 1em;
+  }
+  .href {
+    text-decoration: none;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-size: 2em;
+  }
+}
+
+.about {
+  border: 1px solid;
+  padding: 5%;
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 797px) {
+  .img {
+    @include img(30%, 10vh);
+  }
+  .profile {
+    @include profile(20%, 20%);
+  }
+  .container {
+    @include smallContainer();
+    .about {
+      border: 0.5px solid;
+      padding: 2%;
+      p {
+        font-family: "Poppins", sans-serif;
+        font-size: 1em;
+      }
+    }
+  }
+}
+
+@media (min-width: 797px) {
+  .container {
+    .project {
+      margin-left: 2%;
+    }
+    @include mediumContainer();
+  }
+}
+
+@media (min-width: 978px) {
+  .container {
+    .project {
+      margin-left: 2%;
+    }
+    @include largeContainer();
+  }
+}

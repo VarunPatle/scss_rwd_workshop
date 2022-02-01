@@ -1,0 +1,17 @@
+
+@mixin largeContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+@mixin mediumContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100vh;
+}
+
+@mixin smallContainer {
+    display: block;
+    height: 100vh;
+}
